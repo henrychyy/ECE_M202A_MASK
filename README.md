@@ -1,6 +1,10 @@
-# ECE_M202A_MASK
+# ECE_M202A_MASK --- TEAM CL
 
 This Project is for ECE M202A at UCLA
+
+## Team Member:
+Hongyi Chen
+Rui Lin
 
 ## Overview
 

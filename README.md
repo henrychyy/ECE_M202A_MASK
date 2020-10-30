@@ -32,6 +32,8 @@ The 1200 mAh Lithium Battery allows 2 hours usage.
 
 ##System Architecture
 
+![flowchart](images/pipeline.png)
+
 
 
 

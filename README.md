@@ -4,6 +4,7 @@ This Project is for ECE M202A at UCLA
 
 ## Team Member:
 Hongyi Chen
+
 Rui Lin
 
 ## Overview

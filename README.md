@@ -60,21 +60,21 @@ The mask can adjust the mouth-opening pattern by voice volume.
 
 ## Timeline
 
-<b>Week 1-3</b> ___ Generate Idea 
+<b>Week 1-3</b> ------ Generate Idea 
 
-<b>Week 4</b>         Proposal / Order Materials
+<b>Week 4</b>      ------   Proposal / Order Materials
 
-<b>Week 5 </b>             Coding for Input and Output Pattern
+<b>Week 5 </b>       ------      Coding for Input and Output Pattern
 
-<b>Week 6 </b>             Add Volume Detection function
+<b>Week 6 </b>         ------    Add Volume Detection function
 
-<b>Week 7 </b>              First Prototyping and Test
+<b>Week 7 </b>        ------      First Prototyping and Test
 
-<b>Week 8 </b>          Add BLE Interface and APP interface if the time allow
+<b>Week 8 </b>     ------     Add BLE Interface and APP interface if the time allow
 
-<b>Week 9 </b>              Final Test / Documentation
+<b>Week 9 </b>         ------     Final Test / Documentation
 
-<b>Week 10 </b>             Demo
+<b>Week 10 </b>       ------      Demo
 
 ## Software 
 

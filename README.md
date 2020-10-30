@@ -60,25 +60,25 @@ The mask can adjust the mouth-opening pattern by voice volume.
 
 ## Timeline
 
-<b>Week 1-3             Generate Idea
+<b>Week 1-3</b>             Generate Idea
 
-Week 4               Proposal / Order Materials
+<b>Week 4</b>               Proposal / Order Materials
 
-Week 5               Coding for Input and Output Pattern
+<b>Week 5 </b>              Coding for Input and Output Pattern
 
-Week 6               Add Volume Detection function
+<b>Week 6 </b>              Add Volume Detection function
 
-Week 7               First Prototyping and Test
+<b>Week 7 </b>              First Prototyping and Test
 
-Week 8               Add BLE Interface and APP interface if the time allow
+<b>Week 8 </b>              Add BLE Interface and APP interface if the time allow
 
-Week 9              Final Test / Documentation
+<b>Week 9 </b>              Final Test / Documentation
 
-Week 10            Demo
+<b>Week 10 </b>             Demo
 
 ## Software 
 
-Arduino IDE\
+Arduino IDE
 Edge Pulse
 
 

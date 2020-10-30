@@ -22,17 +22,25 @@ The mask is able to detect the word and specific tones through machine learning,
 ### Volume Amplitude Recognition
 The mask can adjust the mouth-opening pattern by voice volume.
 ### BLE Interface
-Users can control the pattern and brightness of the LED panel. 
-Users can control the on/off.
-Users can monitor the battery usage.
-Users can acquire the data from sensors, such as temperature, humidity, and the speed of walking.
+1.Users can control the pattern and brightness of the LED panel. 
+
+2.Users can control the on/off.
+
+3.Users can monitor the battery usage.
+
+4.Users can acquire the data from sensors, such as temperature, humidity, and the speed of walking.
+
 ### APP interface
-Users can choose the pattern they like on the app.
-Users can turn on or off the lightning functions.
-Rechargeable Battery System
-Users can recharge the battery through micro-usb.
-The Battery Indicator can show the 
-The 1200 mAh Lithium Battery allows 2 hours usage.
+1.Users can choose the pattern they like on the app.
+
+2.Users can turn on or off the lightning functions.
+
+### Rechargeable Battery System
+1.Users can recharge the battery through micro-usb.
+
+2.The Battery Indicator can show the 
+
+3.The 1200 mAh Lithium Battery allows 2 hours usage.
 
 
 ## System Architecture
@@ -53,12 +61,19 @@ The 1200 mAh Lithium Battery allows 2 hours usage.
 ## Timeline
 
 Week 1-3            Generate Idea
+
 Week 4               Proposal / Order Materials
+
 Week 5               Coding for Input and Output Pattern
+
 Week 6               Add Volume Detection function
+
 Week 7               First Prototyping and Test
+
 Week 8               Add BLE Interface and APP interface if the time allow
+
 Week 9              Final Test / Documentation
+
 Week 10            Demo
 
 ## Software 

@@ -78,7 +78,7 @@ Week 10            Demo
 
 ## Software 
 
-Arduino IDE
+Arduino IDE\
 Edge Pulse
 
 

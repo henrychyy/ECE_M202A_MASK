@@ -60,7 +60,7 @@ The mask can adjust the mouth-opening pattern by voice volume.
 
 ## Timeline
 
-Week 1-3            Generate Idea
+Week 1-3             Generate Idea
 
 Week 4               Proposal / Order Materials
 

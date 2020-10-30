@@ -63,7 +63,7 @@ Edge Pulse
 
 
 ## Hardware List / Budget
-![budget](images/budget.PNG)
+![budget](images/budget.png)
 
 
 

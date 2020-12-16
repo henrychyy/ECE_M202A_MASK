@@ -14,6 +14,7 @@ Under the tough COVID-19 pandemic, thousands of people lost their lives and lots
 
 
 ### Goals
+---
 Build a mask which is able to detect voice volume, recognize the sound of crying and smiling under a noisy environment, and output different patterns on LED.  
 
 ### Hardware List

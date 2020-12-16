@@ -10,16 +10,20 @@ Rui Lin
 ## Overview
 
 ### Motivation
-A mask doesn’t have to hide the smiling while protecting people from possible COVID-19 infection.The Voice-Activated LED facial mask is not only a PPE, but also a wearable IoT device which implements BLE and various sensors. It can protect the user from viruses while mimicking someone talking or smiling even when their mouth is hidden behind the protective cloth. 
+Under the tough COVID-19 pandemic, thousands of people lost their lives and lots of hospitals' ICU are hitting capacity. However, there are a lot of people still not wearing masks. We want to do something to encourage everyone to wear a mask which helps stop spreading of virus. A mask doesn’t have to hide the smiling while protecting people from possible COVID-19 infection. Thus, the Voice-Activated LED facial mask we built is not only a PPE, but also a wearable IoT device which implements BLE and various sensors. It can protect users from virus while mimicking their talking or smiling even when their mouth is hidden behind the protective cloth. 
 
-Our team is going to implement machine learning techniques to build an embedded system that can recognize when a particular sound is happening—a task known as audio classification. The system is able to recognize the sound of crying and smiling, even in the presence of other background noise. We collect audio data from built-in microphone of Arduino Nano, use signal processing to extract the most important information, and train a classifier that can distinguish different words. Finally, deploy the system to the Arduino Nano 33 BLE SENSE to control the LED panel.
 
 ### Goals
+To build a mask which is able to detect voice volume and recognize the sound of crying and smiling, even in the presence of other background noise.
 
-The Voice-Activated LED Facial Mask is designed to achieve three functions at the current stage. The team is going to add or delete functions based on the team’s timetable and progress.
+### Hardware List
+1. Arduino Nano 33 BLE Sense
+
+2. 8 * 8 Flex LED Panel
 
 #### Voice Recognition 
 The mask is able to detect the word and specific tones through machine learning, The LED will output different patterns such as smiling and crying, which depends on the keyword.
+
 #### Volume Amplitude Recognition
 The mask can adjust the mouth-opening pattern by voice volume.
 #### BLE Interface

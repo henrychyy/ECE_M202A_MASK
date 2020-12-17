@@ -28,12 +28,16 @@ Build a mask which is able to detect voice volume, recognize the sound of crying
 
 5. Facial Mask (desire black)
 
+## Prior Work
+Online Edge Pulse, hard to collect dataset. Ours is better.
+
 ## Implementation
-We use Arduino Nano 33 BLE Sense built in microphone and we connect a 8*8 Flex LED Panel to it. We use a 1200 mAH Lithium Battery as source. We decided to implement our mask like a sandwich. We embedded the Arduino and LED Panel in the outter mask, black color is desired for better light output. And inner mask is replaceble for healthy concern.  
+We use Arduino Nano 33 BLE Sense built in microphone and we connect a 8*8 Flex LED Panel to it. We use a 1200 mAH Lithium Battery as source. We decided to implement our mask like a sandwich. We embedded the Arduino and LED Panel in the outter mask, black color is desired for better light output. And inner mask is replaceble for healthy concern. The picture below is out implementation. The picture below is our mask.
 ## System Architecture
 ---
 ![flowchart](images/pipeline.png)
 
+Our project are divided mainly in three parts. And we will discuss the function and technical approch in each part.
 ## Part 1: Volume Amplitude Detection and Output  
 ---
 ### Function:
@@ -58,7 +62,7 @@ Video:
 ### Demo:
 
 ### Code Sample:
-
+For generating data.
 
 ## Part3: Keyword Recognizer and Print Characters
 #### BLE Interface
@@ -83,9 +87,19 @@ Video:
 3.The 1200 mAh Lithium Battery allows 2 hours usage.
 
 
+## Strength and Weakness
+
+ML, dataset limited by arduino, connection, looks better.
+
+## Future Direction
+GUI, NLP(Rpi).
+
+## Contribution
 
 
+## Links
 
+## Reference
 
 
 

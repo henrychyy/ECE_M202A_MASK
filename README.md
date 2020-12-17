@@ -28,6 +28,8 @@ Build a mask which is able to detect voice volume, recognize the sound of crying
 
 5. Facial Mask (desire black)
 
+## Implementation
+We use Arduino Nano 33 BLE Sense built in microphone and we connect a 8*8 Flex LED Panel to it. We use a 1200 mAH Lithium Battery as source. We decided to implement our mask like a sandwich. We embedded the Arduino and LED Panel in the outter mask, black color is desired for better light output. And inner mask is replaceble for healthy concern.  
 ## System Architecture
 ---
 ![flowchart](images/pipeline.png)
@@ -45,13 +47,13 @@ Video:
 ## Part2: Keyword Reconginzer and Print Emoji
 ---
 ### Approach Process and Method
-1. Recorded dataset for our keywords and noise under different scenarios.
+1. Recorded 30 seconds dataset for each keyword under both noisy and quiet environment. Similar to part1, we use PDM library to get rms value of voice and store all the value into a csv file.
 
-2. Used scikit-learn library in Python to train a classifier to distinguish different keywords.
+2. Used scikit-learn library in Python to train a classifier to distinguish different keywords. 
 
-3. Choose words with higher accuracy and avoid homophones to make sure the robustness.
+3. Use micromlgen library to convert classifier into C code and implement it on Arduino. 
 
-4. Use micromlgen library to convert classifie into C code and implement it on Arduino
+4. We test the keywords accuracy on Arduino, and choose "yes", "no", "happy", "sad" as our keywords. We need to avoid homophones for better result.
 
 ### Demo:
 

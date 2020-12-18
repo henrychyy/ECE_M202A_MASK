@@ -48,24 +48,8 @@ The mask can adjust the mouth-opening pattern by voice volume. We extract the pe
 
 ### Sample Code
 For generating data, we use the built in microphone on Arduino board. We access the microphone data by using the PDM library. In order to update data every timeslot, we write up the code based on Giancono's tutorial about how to get raw sensor data through serial.
+![read_data](images/read_data.png)
 
-bool recordAudioSample() {
-
-    if (mic.hasData() && mic.pop() > SOUND_THRESHOLD) {
-    
-        for (int i = 0; i < SAMPLES; i++) {
-        
-            while (!mic.hasData())
-            
-                delay(1);
-                
-            features[i] = mic.pop() * GAIN;
-        }             
-     return true;
-    }
-
-    return false;
-}
 ## Part2: Keyword Reconginzer and Print Emoji
 ---
 ### Approach Process and Method

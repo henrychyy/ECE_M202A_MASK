@@ -47,22 +47,21 @@ The mask can adjust the mouth-opening pattern by voice volume. We extract the pe
 Video:
 
 ### Sample Code
-
+For generating data, we use the built in microphone on Arduino board. We access the microphone data by using the PDM library. In order to update data every timeslot, we write up the code based on Giancono's tutorial about how to get raw sensor data through serial.
 ## Part2: Keyword Reconginzer and Print Emoji
 ---
 ### Approach Process and Method
-1. Recorded 30 seconds dataset for each keyword under both noisy and quiet environment. Similar to part1, we use PDM library to get rms value of voice and store all the value into a csv file.
+1. Recorded 30 seconds dataset for each keyword under both noisy and quiet environment. Similar to part1, we use PDM library to get rms value of voice and store all the value into a csv file. 
 
 2. Used scikit-learn library in Python to train a classifier to distinguish different keywords. 
-
+  Code
 3. Use micromlgen library to convert classifier into C code and implement it on Arduino. 
-
+Code
 4. We test the keywords accuracy on Arduino, and choose "yes", "no", "happy", "sad" as our keywords. We need to avoid homophones for better result.
-
+Plot ( randomforest, svm, knn) preprocessing data
 ### Demo:
 
-### Code Sample:
-For generating data.
+
 
 ## Part3: Keyword Recognizer and Print Characters
 #### BLE Interface
@@ -101,7 +100,7 @@ GUI, NLP(Rpi).
 
 ## Reference
 
-
+https://dalegi.com/2020/06/09/the-hacky-super-loop-arduino-nano-33-ble-sense-example-you-have-been-waiting-for/
 
 
 

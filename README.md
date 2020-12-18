@@ -64,6 +64,18 @@ Plot ( randomforest, svm, knn) preprocessing data
 
 
 ## Part3: Keyword Recognizer and Print Characters
+
+[![Keyword Detection - Character](http://img.youtube.com/vi/60HjuuUjA8w/0.jpg)](http://www.youtube.com/watch?v=60HjuuUjA8w "Keyword Detection - Character")
+
+## Strength and Weakness
+
+ML, dataset limited by arduino, connection, looks better.
+
+## Future Direction
+1. We can build a GUI app interface to control the LED mask if time allows. For example, users can change patterns, functions or colors they prefer. 
+
+2. We can use Raspberry Pi as our mini-computer, and thus we can implement more function to our LED because it can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language process helps us determine the emotion of user.
+
 #### BLE Interface
 1.Users can control the pattern and brightness of the LED panel. 
 
@@ -84,18 +96,6 @@ Plot ( randomforest, svm, knn) preprocessing data
 2.The Battery Indicator can show the 
 
 3.The 1200 mAh Lithium Battery allows 2 hours usage.
-
-
-## Strength and Weakness
-
-ML, dataset limited by arduino, connection, looks better.
-
-## Future Direction
-1. We can build a GUI app interface to control the LED mask if time allows. For example, users can change patterns, functions or colors they prefer. 
-
-2. We can use Raspberry Pi as our mini-computer, and thus we can implement more function to our LED because it can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language process helps us determine the emotion of user.
-
-
 ## Contribution
 
 

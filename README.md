@@ -60,7 +60,7 @@ Code
 4. We test the keywords accuracy on Arduino, and choose "yes", "no", "happy", "sad" as our keywords. We need to avoid homophones for better result.
 Plot ( randomforest, svm, knn) preprocessing data
 ### Demo:
-
+[![Keyword Detection - Emoji](http://img.youtube.com/vi/aqs0FbGRNAs/0.jpg)](http://www.youtube.com/watch?v=aqs0FbGRNAs "Keyword Detection - Emoji")
 
 
 ## Part3: Keyword Recognizer and Print Characters

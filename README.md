@@ -44,7 +44,7 @@ Our project are divided mainly in three parts. And we will discuss the function 
 The mask can adjust the mouth-opening pattern by voice volume. We extract the peak rms value of sound for a certain period, and we set certain threshold for loud and silent situations. 
 
 ### Demo:
-[![Volume Detection](http://img.youtube.com/vi/https://youtu.be/ARSoRdHVBX4/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/ARSoRdHVBX4 "Video Title")
+[![Volume Detection](http://img.youtube.com/vi/https://youtu.be/ARSoRdHVBX4/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/ARSoRdHVBX4 "Volume Detection")
 
 ### Sample Code
 For generating data, we use the built in microphone on Arduino board. We access the microphone data by using the PDM library. In order to update data every timeslot, we write up the code based on Giancono's tutorial about how to get raw sensor data through serial.

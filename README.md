@@ -44,7 +44,7 @@ Our project are divided mainly in three parts. And we will discuss the function 
 The mask can adjust the mouth-opening pattern by voice volume. We extract the peak rms value of sound for a certain period, and we set certain threshold for loud and silent situations. 
 
 ### Demo:
-Video:
+[![Volume Detection](http://img.youtube.com/vi/https://youtu.be/ARSoRdHVBX4/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/ARSoRdHVBX4 "Video Title")
 
 ### Sample Code
 For generating data, we use the built in microphone on Arduino board. We access the microphone data by using the PDM library. In order to update data every timeslot, we write up the code based on Giancono's tutorial about how to get raw sensor data through serial.
@@ -91,7 +91,10 @@ Plot ( randomforest, svm, knn) preprocessing data
 ML, dataset limited by arduino, connection, looks better.
 
 ## Future Direction
-GUI, NLP(Rpi).
+1. We can build a GUI app interface to control the LED mask if time allows. For example, users can change patterns, functions or colors they prefer. 
+
+2. We can use Raspberry Pi as our mini-computer, and thus we can implement more function to our LED because it can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language process helps us determine the emotion of user.
+
 
 ## Contribution
 

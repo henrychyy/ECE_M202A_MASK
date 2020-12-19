@@ -1,6 +1,4 @@
-# ECE_M202A_MASK --- TEAM CL
-
-This Project is for ECE M202A at UCLA
+# Voice-Activated LED Facial Mask --- TEAM CL
 
 ## Team Member:
 Hongyi Chen

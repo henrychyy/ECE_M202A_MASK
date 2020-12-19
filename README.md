@@ -1,4 +1,6 @@
-# Voice-Activated LED Facial Mask --- TEAM CL
+# ECE_M202A_MASK --- TEAM CL
+
+This Project is for ECE M202A at UCLA
 
 ## Team Member:
 Hongyi Chen
@@ -8,7 +10,7 @@ Rui Lin
 ## Overview
 ---
 ### Motivation
-Under the tough COVID-19 pandemic, thousands of people lost their lives and lots of hospitals' ICUs are hitting capacity. However, there are a lot of people still not wearing masks. The team members aim to design a special PPE to encourage more people to wear the mask which helps stop the spread of virus. A mask doesn’t have to hide the smiling while protecting people from possible COVID-19 infection. Thus, the Voice-Activated LED facial mask we built is not only a PPE, but also a wearable IoT device which implements BLE and various sensors. It can protect users from viruses while mimicking their talking or smiling even when their mouth is hidden behind the protective cloth. 
+Under the tough COVID-19 pandemic, thousands of people lost their lives and lots of hospitals' ICUs are hitting capacity. However, there are a lot of people still not wearing masks. Our team aims to design a special PPE to encourage more people to wear the mask which helps stop the spread of virus. A mask doesn’t have to hide the smiling while protecting people from possible COVID-19 infection. Thus, the Voice-Activated LED facial mask we built is not only a PPE, but also a wearable IoT device which implements BLE and various sensors. It can protect users from viruses while mimicking their talking or smiling even when their mouth is hidden behind the protective cloth. 
 
 
 ### Goals
@@ -18,6 +20,7 @@ Design and build a mask which can detect the voice volume, detect the keyword, r
 ![budget](images/budget.png)
 
 ## Prior Work
+--
 <a target="_blank" rel="noopener noreferrer" href="https://docs.edgeimpulse.com/docs/audio-classification" >Edge Impulse Audio Classification</a>
 
 The Online Edge Impulse provides an easier way to apply machine learning and train the model, but it is hard to collect the dataset online due to the delay. Our team decides to develop an arduino program to collect data and implement the Micromlgen to train the model. 
@@ -41,7 +44,7 @@ Our project is mainly divided into three parts. The following content will intro
 ### Function:
 The LED panel embedded in the facial mask can display different angles of the mouth-opening pattern by detecting voice volume. The arduino program can extract the peak of RMS value from sound for a certain period, and we set a certain threshold for loud and silent situations. 
  
-###Process
+###Approach Process and Method
 Implement the PDM library to extract the RMS value from the built-in microphone.
 Design different bitmaps for different patterns.
 Use a case structure to display and optimize by setting delay.
@@ -52,12 +55,16 @@ Use a case structure to display and optimize by setting delay.
 For generating data, we use the built-in microphone on an Arduino board. We access the microphone data by using the PDM library. In order to update data every time slot, we write up the code based on Giancono's tutorial about how to get raw sensor data through serial.
 ![read_data](images/read_data.PNG)
 
-## Part2: Keyword Recognizer and Print Emoji
+## Part 2: Keyword Recognizer and Print Emoji
 ---
-### Approach Process and Method
-- Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. And, stored all the rms values into a csv file for each keyword.
 
-- Developed a python program by using scikit-learn library to train a classifier based on recorded data to distinguish certain keywords. 
+### Function
+The LED panel embedded in the facial mask can display Emoji when it detects keywords. 
+
+### Approach Process and Method
+1. Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. Read and store all the rms values into a csv file for each keyword based on the sample code in part 1.
+
+2. Developed a python program by using scikit-learn library to train a classifier based on recorded data to distinguish certain keywords. 
 
 ```python
 from sklearn.svm import SVC
@@ -66,91 +73,67 @@ from sklearn.ensemble import RandomForestClassifier
 ```
 
 
-- Used Micromlgen library to convert classifier into C code and deploy on Arduino board. 
-
+3. Used Micromlgen library to convert classifier into C code and deploy on Arduino board. 
 ```python
 from micromlgen import port
 ```
 
 
-- Tested the accuracy of detecting keywords on Arduino, and chose "yes", "no", "happy", "sad" as our keywords. (Need to avoid homophones for better results)
+4. Tested the accuracy of detecting keywords on Arduino, and chose "yes", "no", "happy", "sad" as our keywords. (Need to avoid homophones for better results) After comparing performance of different classifiers, we choose to use SVM.
 ![classi_test](images/classi_test.png)
 
 ### Demo:
 [![Keyword Detection - Emoji](http://img.youtube.com/vi/aqs0FbGRNAs/0.jpg)](http://www.youtube.com/watch?v=aqs0FbGRNAs "Keyword Detection - Emoji")
 
 
-## Part3: Keyword Recognizer and Print Characters
-
-Demo for printing keywords on LED display by detecting certain keywords.
+## Part 3: Keyword Recognizer and Print Characters
+--
+### Function
+The LED panel embedded in the facial mask can display characters when it detects keywords.
+###Demo
 [![Keyword Detection - Character](http://img.youtube.com/vi/60HjuuUjA8w/0.jpg)](http://www.youtube.com/watch?v=60HjuuUjA8w "Keyword Detection - Character")
 
 ## Strength and Weakness
-
+--
 Strength:
 Applied machine learning on microcontroller.
+
+Overall keyword detection accuracy is 96%.
+
 Users can easily train the classifier by using the provided arduino program.
+
 Users can customize the LED output pattern easily. 
 
 Weakness:
 Limited size of the dataset due to the small memory on Arduino Nano 33 BLE Sense
-The accuracy of keyword detection is 83% and needs to improve.
+
+The accuracy of some keywords is not robust as desired and needs to improve.
+
 The physical layout of the circuit needs to revise to improve the user’s experience.
 
 ## Future Direction
+--
 1. Build an IOS/Android App to connect the Arduino board through BLE. The users can control the LED mask and monitor the status of the facial mask. For example, users can change patterns, functions or colors they prefer. And also can set the four hours alarm to remind changing the inner facial mask for health issues.
 
 2. Use the Raspberry Pi as our mini-computer, and thus can implement more function to our LED because RPI can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language processing techniques that helps us determine the emotion of the user.
 
 
 ## Contribution
+--
 - Hongyi Chen:
-  - Research the method for deploying machine learning on microcontroller.
+   - Research the method for deploying machine learning on microcontroller.
+   - Train the keyword-detection classifier by developing a python program.
+   - Convert the classifier code from Python to C and deploy to the arduino board.
+   - Physical connection of the circuit.
 
-  - Train the keyword-detection classifier by developing a python program.
-
-  - Convert the classifier code from Python to C and deploy to the arduino board.
-
-  - Physical connection of the circuit.
- 
-- Rui Lin:
-  - Collect the dataset by using an arduino program.
-
-  - Set up LED matrix by using NeoMatrix and Neopixel Library
-
-  - Develop a Arduino program to combine the machine learning result and the LED pattern together
-
-  - Optimize the transitions and animations for the LED display.
+Rui Lin:
+Collect the dataset by using an arduino program.
+Set up LED matrix by using NeoMatrix and Neopixel Library
+Develop a Arduino program to combine the machine learning result and the LED pattern together
+Optimize the transitions and animations for the LED display.
 
 ## Reference
 
-<a target="_blank" rel="noopener noreferrer" href="https://dalegi.com/2020/09/04/the-arduino-nano-33-ble-sense-sensor-library-you-have-been-waiting-for/" >Arduino Nano 33 BLE sensor library</a>
+<a target="_blank" rel="noopener noreferrer" href="https://dalegi.com/2020/09/04/the-arduino-nano-33-ble-sense-sensor-library-you-have-been-waiting-for/" >Arduino Nano 33 BLE Sensor Library</a>
 
-<a target="_blank" rel="noopener noreferrer" href="https://store.arduino.cc/usa/nano-33-ble-with-headers" >Edge Impulse Audio Classification</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<a target="_blank" rel="noopener noreferrer" href="https://store.arduino.cc/usa/nano-33-ble-with-headers" >Arduino Nano 33 BLE Sense Pinout Diagram</a>

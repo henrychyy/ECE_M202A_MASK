@@ -107,14 +107,20 @@ The physical layout of the circuit needs to revise to improve the user’s exper
 ## Contribution
 Hongyi Chen:
 Research the method for deploying machine learning on microcontroller.
+
 Train the keyword-detection classifier by developing a python program.
+
 Convert the classifier code from Python to C and deploy to the arduino board.
+
 Physical connection of the circuit.
 
 Rui Lin:
 Collect the dataset by using an arduino program.
+
 Set up LED matrix by using NeoMatrix and Neopixel Library
+
 Develop a Arduino program to combine the machine learning result and the LED pattern together
+
 Optimize the transitions and animations for the LED display.
 
 ## Reference

@@ -93,7 +93,7 @@ from micromlgen import port
 ---
 ### Function
 The LED panel embedded in the facial mask can display characters when it detects keywords.
-###Demo
+### Demo
 [![Keyword Detection - Character](http://img.youtube.com/vi/60HjuuUjA8w/0.jpg)](http://www.youtube.com/watch?v=60HjuuUjA8w "Keyword Detection - Character")
 
 ## Strength and Weakness

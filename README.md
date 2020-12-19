@@ -6,7 +6,11 @@ This Project is for ECE M202A at UCLA
 Hongyi Chen
 
 Rui Lin
+## Link
+---
+<a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1Gur_cWP2t0CbhkV5x47pZOBvRsnr48twLqwC-VjyqII/edit?usp=sharing" >Slides</a>
 
+<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/YDDWUfr4Q-U" >Final Presentation</a>
 ## Overview
 ---
 ### Motivation
@@ -135,10 +139,6 @@ Weakness:
   - Set up LED matrix by using NeoMatrix and Neopixel Library
   - Develop a Arduino program to combine the machine learning result and the LED pattern together
   - Optimize the transitions and animations for the LED display.
-## Link
----
-<a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1Gur_cWP2t0CbhkV5x47pZOBvRsnr48twLqwC-VjyqII/edit?usp=sharing" >Slides</a>
-<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/YDDWUfr4Q-U" >Final Presentation</a>
 
 ## Reference
 

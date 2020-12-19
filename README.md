@@ -55,9 +55,9 @@ For generating data, we use the built-in microphone on an Arduino board. We acce
 ## Part2: Keyword Recognizer and Print Emoji
 ---
 ### Approach Process and Method
-1. Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. And, stored all the rms values into a csv file for each keyword.
+- Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. And, stored all the rms values into a csv file for each keyword.
 
-2. Developed a python program by using scikit-learn library to train a classifier based on recorded data to distinguish certain keywords. 
+- Developed a python program by using scikit-learn library to train a classifier based on recorded data to distinguish certain keywords. 
 
 ```python
 from sklearn.svm import SVC
@@ -66,13 +66,14 @@ from sklearn.ensemble import RandomForestClassifier
 ```
 
 
-3. Used Micromlgen library to convert classifier into C code and deploy on Arduino board. 
+- Used Micromlgen library to convert classifier into C code and deploy on Arduino board. 
+
 ```python
 from micromlgen import port
 ```
 
 
-4. Tested the accuracy of detecting keywords on Arduino, and chose "yes", "no", "happy", "sad" as our keywords. (Need to avoid homophones for better results)
+- Tested the accuracy of detecting keywords on Arduino, and chose "yes", "no", "happy", "sad" as our keywords. (Need to avoid homophones for better results)
 ![classi_test](images/classi_test.png)
 
 ### Demo:

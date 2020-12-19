@@ -130,10 +130,10 @@ Weakness:
    - Physical connection of the circuit.
 
 - Rui Lin:
- - Collect the dataset by using an arduino program.
- - Set up LED matrix by using NeoMatrix and Neopixel Library
- - Develop a Arduino program to combine the machine learning result and the LED pattern together
- - Optimize the transitions and animations for the LED display.
+  - Collect the dataset by using an arduino program.
+  - Set up LED matrix by using NeoMatrix and Neopixel Library
+  - Develop a Arduino program to combine the machine learning result and the LED pattern together
+  - Optimize the transitions and animations for the LED display.
 
 ## Reference
 

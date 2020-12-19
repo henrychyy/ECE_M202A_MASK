@@ -20,14 +20,17 @@ Design and build a mask which can detect the voice volume, detect the keyword, r
 ![budget](images/budget.png)
 
 ## Prior Work
---
+---
 <a target="_blank" rel="noopener noreferrer" href="https://docs.edgeimpulse.com/docs/audio-classification" >Edge Impulse Audio Classification</a>
 
 The Online Edge Impulse provides an easier way to apply machine learning and train the model, but it is hard to collect the dataset online due to the delay. Our team decides to develop an arduino program to collect data and implement the Micromlgen to train the model. 
 
 ## Implementation
-Our team use the built-in microphone on Arduino Nano 33 BLE Sense board as the input device  and connect a 8*8 Flexible LED Panel to GPIO Pin 6 as the output. For the power supply, our team decides to use the 1200 mAH Lithium Battery to power both the board and the LED display. 
+---
+Our team use the built-in microphone on Arduino Nano 33 BLE Sense board as the input device  and connect a 8*8 Flexible LED Panel to GPIO Pin 6 as the output. For the power supply, our team decides to use the 1200 mAH Lithium Battery to power both the board and the LED display.
+
 <img src="https://github.com/henrychyy/ECE_M202A_MASK/blob/main/images/Pinout.png?raw=true" width="800" />
+
 The structure of the facial mask is three layers, like a sandwich. The Arduino board, LED Panel and the Battery are fixed by tape on the inner side of the outer mask. The black color’s mask is preferred in order to obtain better light output. The inner mask is replaceable for healthy concern since CDC advises to change facial mask every four hours.  The pictures below are the prototype of the facial mask.
 
 ![circuit](images/circuit.PNG)
@@ -87,50 +90,50 @@ from micromlgen import port
 
 
 ## Part 3: Keyword Recognizer and Print Characters
---
+---
 ### Function
 The LED panel embedded in the facial mask can display characters when it detects keywords.
 ###Demo
 [![Keyword Detection - Character](http://img.youtube.com/vi/60HjuuUjA8w/0.jpg)](http://www.youtube.com/watch?v=60HjuuUjA8w "Keyword Detection - Character")
 
 ## Strength and Weakness
---
+---
 Strength:
-Applied machine learning on microcontroller.
+- Applied machine learning on microcontroller.
 
-Overall keyword detection accuracy is 96%.
+- Overall keyword detection accuracy is 96%.
 
-Users can easily train the classifier by using the provided arduino program.
+- Users can easily train the classifier by using the provided arduino program.
 
-Users can customize the LED output pattern easily. 
+- Users can customize the LED output pattern easily. 
 
 Weakness:
-Limited size of the dataset due to the small memory on Arduino Nano 33 BLE Sense
+- Limited size of the dataset due to the small memory on Arduino Nano 33 BLE Sense
 
-The accuracy of some keywords is not robust as desired and needs to improve.
+- The accuracy of some keywords is not robust as desired and needs to improve.
 
-The physical layout of the circuit needs to revise to improve the user’s experience.
+- The physical layout of the circuit needs to revise to improve the user’s experience.
 
 ## Future Direction
---
+---
 1. Build an IOS/Android App to connect the Arduino board through BLE. The users can control the LED mask and monitor the status of the facial mask. For example, users can change patterns, functions or colors they prefer. And also can set the four hours alarm to remind changing the inner facial mask for health issues.
 
 2. Use the Raspberry Pi as our mini-computer, and thus can implement more function to our LED because RPI can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language processing techniques that helps us determine the emotion of the user.
 
 
 ## Contribution
---
+---
 - Hongyi Chen:
    - Research the method for deploying machine learning on microcontroller.
    - Train the keyword-detection classifier by developing a python program.
    - Convert the classifier code from Python to C and deploy to the arduino board.
    - Physical connection of the circuit.
 
-Rui Lin:
-Collect the dataset by using an arduino program.
-Set up LED matrix by using NeoMatrix and Neopixel Library
-Develop a Arduino program to combine the machine learning result and the LED pattern together
-Optimize the transitions and animations for the LED display.
+-Rui Lin:
+ - Collect the dataset by using an arduino program.
+ - Set up LED matrix by using NeoMatrix and Neopixel Library
+ - Develop a Arduino program to combine the machine learning result and the LED pattern together
+ - Optimize the transitions and animations for the LED display.
 
 ## Reference
 

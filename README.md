@@ -143,5 +143,7 @@ Weakness:
 ## Reference
 
 <a target="_blank" rel="noopener noreferrer" href="https://dalegi.com/2020/09/04/the-arduino-nano-33-ble-sense-sensor-library-you-have-been-waiting-for/" >Arduino Nano 33 BLE Sensor Library</a>
+
 <a target="_blank" rel="noopener noreferrer" href="https://eloquentarduino.github.io/2020/08/better-word-classification-with-arduino-33-ble-sense-and-machine-learning/" >Word Classification with Arduino</a>
+
 <a target="_blank" rel="noopener noreferrer" href="https://store.arduino.cc/usa/nano-33-ble-with-headers" >Arduino Nano 33 BLE Sense Pinout Diagram</a>

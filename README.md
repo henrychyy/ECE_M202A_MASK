@@ -16,16 +16,8 @@ Under the tough COVID-19 pandemic, thousands of people lost their lives and lots
 ### Goals
 Design and build a mask which can detect the voice volume, detect the keyword, recognize the sound of crying and smiling under a noisy environment by machine learning, and output different patterns on LED.  
 
-### Hardware List
-1. Arduino Nano 33 BLE Sense
-
-2. 8*8 Flex LED Panel
-
-3. 1200 mAH Lithium Battery
-
-4. Battery Charger
-
-5. Facial Mask (desire black)
+## Hardware List / Budget
+![budget](images/budget.png)
 
 ## Prior Work
 <a target="_blank" rel="noopener noreferrer" href="https://docs.edgeimpulse.com/docs/audio-classification" >Edge Impulse Audio Classification</a>
@@ -37,7 +29,7 @@ Our team use the built-in microphone on Arduino Nano 33 BLE Sense board as the i
 <img src="https://github.com/henrychyy/ECE_M202A_MASK/blob/main/images/Pinout.png?raw=true" width="800" />
 The structure of the facial mask is three layers, like a sandwich. The Arduino board, LED Panel and the Battery are fixed by tape on the inner side of the outer mask. The black color’s mask is preferred in order to obtain better light output. The inner mask is replaceable for healthy concern since CDC advises to change facial mask every four hours.  The pictures below are the prototype of the facial mask.
 
-![circuit](images/circuit.jpg)
+![circuit](images/circuit.PNG)
 
 
 ## System Architecture
@@ -65,18 +57,25 @@ For generating data, we use the built-in microphone on an Arduino board. We acce
 ## Part2: Keyword Recognizer and Print Emoji
 ---
 ### Approach Process and Method
-1. Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. And, stored all the values into a csv file for each keyword.
+1. Recorded 30 samples for each keyword under both noisy and quiet environments as the dataset. And, stored all the rms values into a csv file for each keyword.
 
-Code
+2. Developed a python program by using scikit-learn library to train a classifier based on recorded data to distinguish certain keywords. 
 
-2. Developed a python program by using scikit-learn library to train a classifier which can distinguish certain keywords. 
+```python
+from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+```
+
+
 3. Used Micromlgen library to convert classifier into C code and deploy on Arduino board. 
+```python
+from micromlgen import port
+```
 
-Code
 
 4. Tested the accuracy of detecting keywords on Arduino, and chose "yes", "no", "happy", "sad" as our keywords. (Need to avoid homophones for better results)
-
-Plot ( randomforest, svm, knn) preprocessing data
+![classi_test](images/classi_test.png)
 
 ### Demo:
 [![Keyword Detection - Emoji](http://img.youtube.com/vi/aqs0FbGRNAs/0.jpg)](http://www.youtube.com/watch?v=aqs0FbGRNAs "Keyword Detection - Emoji")
@@ -90,46 +89,39 @@ Demo for printing keywords on LED display by detecting certain keywords.
 ## Strength and Weakness
 
 Strength:
-1.
+Applied machine learning on microcontroller.
+Users can easily train the classifier by using the provided arduino program.
+Users can customize the LED output pattern easily. 
 
 Weakness:
-1.
-
-ML, dataset limited by arduino, connection, looks better.
+Limited size of the dataset due to the small memory on Arduino Nano 33 BLE Sense
+The accuracy of keyword detection is 83% and needs to improve.
+The physical layout of the circuit needs to revise to improve the user’s experience.
 
 ## Future Direction
-1. Built a GUI app interface to control the LED mask if time allows. For example, users can change patterns, functions or colors they prefer. 
+1. Build an IOS/Android App to connect the Arduino board through BLE. The users can control the LED mask and monitor the status of the facial mask. For example, users can change patterns, functions or colors they prefer. And also can set the four hours alarm to remind changing the inner facial mask for health issues.
 
-2. Use tjeRaspberry Pi as our mini-computer, and thus we can implement more function to our LED because it can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language processing techniques that helps us determine the emotion of the user.
+2. Use the Raspberry Pi as our mini-computer, and thus can implement more function to our LED because RPI can run multiple programs at same time. With Raspberry Pi we can use voice recognition API from Google Cloud or iFLYTEK, which provides better accuracy and has natural language processing techniques that helps us determine the emotion of the user.
 
-#### BLE Interface
-1.Users can control the pattern and brightness of the LED panel. 
 
-2.Users can control the on/off.
-
-3.Users can monitor the battery usage.
-
-4.Users can acquire the data from sensors, such as temperature, humidity, and the speed of walking.
-
-#### APP interface
-1.Users can choose the pattern they like on the app.
-
-2.Users can turn on or off the lightning functions.
-
-#### Rechargeable Battery System
-1.Users can recharge the battery through micro-usb.
-
-2.The Battery Indicator can show the 
-
-3.The 1200 mAh Lithium Battery allows 2 hours usage.
 ## Contribution
+Hongyi Chen:
+Research the method for deploying machine learning on microcontroller.
+Train the keyword-detection classifier by developing a python program.
+Convert the classifier code from Python to C and deploy to the arduino board.
+Physical connection of the circuit.
 
-
-## Links
+Rui Lin:
+Collect the dataset by using an arduino program.
+Set up LED matrix by using NeoMatrix and Neopixel Library
+Develop a Arduino program to combine the machine learning result and the LED pattern together
+Optimize the transitions and animations for the LED display.
 
 ## Reference
 
-https://dalegi.com/2020/06/09/the-hacky-super-loop-arduino-nano-33-ble-sense-example-you-have-been-waiting-for/
+<a target="_blank" rel="noopener noreferrer" href="https://dalegi.com/2020/09/04/the-arduino-nano-33-ble-sense-sensor-library-you-have-been-waiting-for/" >Arduino Nano 33 BLE sensor library</a>
+
+<a target="_blank" rel="noopener noreferrer" href="https://store.arduino.cc/usa/nano-33-ble-with-headers" >Edge Impulse Audio Classification</a>
 
 
 
@@ -141,8 +133,10 @@ https://dalegi.com/2020/06/09/the-hacky-super-loop-arduino-nano-33-ble-sense-exa
 
 
 
-## Hardware List / Budget
-![budget](images/budget.png)
+
+
+
+
 
 
 

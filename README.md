@@ -25,6 +25,7 @@ Design and build a mask which can detect the voice volume, detect the keyword, r
 
 The Online Edge Impulse provides an easier way to apply machine learning and train the model, but it is hard to collect the dataset online due to the delay. Our team decides to develop an arduino program to collect data and implement the Micromlgen to train the model. 
 
+
 ## Implementation
 ---
 Our team use the built-in microphone on Arduino Nano 33 BLE Sense board as the input device  and connect a 8*8 Flexible LED Panel to GPIO Pin 6 as the output. For the power supply, our team decides to use the 1200 mAH Lithium Battery to power both the board and the LED display.
@@ -134,9 +135,13 @@ Weakness:
   - Set up LED matrix by using NeoMatrix and Neopixel Library
   - Develop a Arduino program to combine the machine learning result and the LED pattern together
   - Optimize the transitions and animations for the LED display.
+## Link
+---
+<a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1Gur_cWP2t0CbhkV5x47pZOBvRsnr48twLqwC-VjyqII/edit?usp=sharing" >Slides</a>
+<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/YDDWUfr4Q-U" >Final Presentation</a>
 
 ## Reference
 
 <a target="_blank" rel="noopener noreferrer" href="https://dalegi.com/2020/09/04/the-arduino-nano-33-ble-sense-sensor-library-you-have-been-waiting-for/" >Arduino Nano 33 BLE Sensor Library</a>
-
+<a target="_blank" rel="noopener noreferrer" href="https://eloquentarduino.github.io/2020/08/better-word-classification-with-arduino-33-ble-sense-and-machine-learning/" >Word Classification with Arduino</a>
 <a target="_blank" rel="noopener noreferrer" href="https://store.arduino.cc/usa/nano-33-ble-with-headers" >Arduino Nano 33 BLE Sense Pinout Diagram</a>

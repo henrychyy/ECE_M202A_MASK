@@ -34,7 +34,7 @@ The Online Edge Impulse provides an easier way to apply machine learning and tra
 
 ## Implementation
 Our team use the built-in microphone on Arduino Nano 33 BLE Sense board as the input device  and connect a 8*8 Flexible LED Panel to GPIO Pin 6 as the output. For the power supply, our team decides to use the 1200 mAH Lithium Battery to power both the board and the LED display. 
-![Pinout](images/Pinout.png width=250)
+<img src="https://github.com/henrychyy/ECE_M202A_MASK/blob/main/images/Pinout.png?raw=true" width="200" />
 The structure of the facial mask is three layers, like a sandwich. The Arduino board, LED Panel and the Battery are fixed by tape on the inner side of the outer mask. The black color’s mask is preferred in order to obtain better light output. The inner mask is replaceable for healthy concern since CDC advises to change facial mask every four hours.  The pictures below are the prototype of the facial mask.
 
 ![circuit](images/circuit.jpg)
